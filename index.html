@@ -28,7 +28,7 @@
     </header>
     <main class="d-flex flex-column justify-content-center">
       <section class="container w-50 my-3">
-        <form class="bg-dark-subtle p-3 border-3 shadow">
+        <form class="bg-dark-subtle p-3 border-3 shadow" id="formPerson">
           <label for="nombreControl" class="form-label text-primary fw-bold">Nombre:</label>
           <input
             class="form-control shadow border-black mb-2"
@@ -67,16 +67,16 @@
             >Sexo: </label
           >
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadio" id="flexRadio1" checked>
-            <label class="form-check-label" for="flexRadio1">
-              Hombre
-            </label>
+            <input class="form-check-input" type="radio" name="flexRadio" id="flexRadio1" checked>M
+            <!-- <label class="form-check-label" for="flexRadio1">
+              
+            </label> -->
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadio" id="flexRadio2" >
-            <label class="form-check-label" for="flexRadio2">
-              Mujer
-            </label>
+            <input class="form-check-input" type="radio" name="flexRadio" id="flexRadio2" >F
+            <!-- <label class="form-check-label" for="flexRadio2">
+              
+            </label> -->
           </div>
           <label for="pesoControl" class="form-label text-primary fw-bold"
             >Peso: </label
@@ -109,13 +109,13 @@
           >
           <input
             class="form-control shadow border-black mb-2"
-            type="date"
+            type="text"
             placeholder="Año Nacimiento"
             id="anioControl"
             required
           />
 
-          <button type="submit" class="btn btn-success my-3" id="mostrarGene">Mostrar generación</button>
+          <button type="submit" class="btn btn-success my-3">Mostrar generación</button>
           <button type="submit" class="btn btn-danger my-3 mx-3">Mayor edad</button>
         </form>
       </section>

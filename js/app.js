@@ -1,3 +1,6 @@
+const formularioPersona = document.querySelector("#formPerson");
+console.log(formularioPersona);
+
 class Persona {
   #_nombre;
   #_edad;
@@ -140,9 +143,9 @@ class Persona {
 
   esMayorEdad() {
     if (this.obtenerEdad >= 18) {
-      document.write(`<h4>La persona es mayor de edad</h4>`);
+      alert(`La persona es mayor de edad`);
     } else {
-      document.write(`<h4>La persona no es mayor de edad</h4>`);
+      alert(`La persona no es mayor de edad`);
     }
   }
 
@@ -158,8 +161,7 @@ class Persona {
   }
 }
 
-const formularioPersona = document.querySelector("form");
-console.log(formularioPersona);
+
 
 const obtenerDatos = (e) => {
   e.preventDefault();
@@ -172,13 +174,35 @@ const obtenerDatos = (e) => {
   console.log(dniInput.value);
   const pesoInput = document.getElementById("pesoControl");
   console.log(pesoInput.value);
-  // const sexoInput = document.querySelector('input[name=flexRadio]:checked').value;
+  const sexoInput = obtenerSexo();
+  console.log(sexoInput);
   const alturaInput = document.getElementById("alturaControl");
   console.log(alturaInput.value);
   const anioInput = document.getElementById("anioControl");
   console.log(anioInput.value);
+  const persona1 = new Persona(nombreInput.value, edadInput.value, dniInput.value,sexoInput, pesoInput.value,alturaInput.value,anioInput.value);
+  console.log(persona1);
+  if(formularioPersona[8]){
+    persona1.mostrarGeneracion();
+  }else if(formularioPersona[9]){
+    persona1.esMayorEdad();
+  }
 };
 
+function obtenerSexo(){
+  const radios = document.getElementsByName('flexRadio');
+  let valorSelec;
+  for(let i = 0; i< radios.length; i++){
+    if(radios[i].checked && radios[i].id == 'flexRadio1'){
+      valorSelec = 'M';
+      break
+    }else if(radios[i].checked && radios[i].id == 'flexRadio2'){
+      valorSelec = 'F';
+      break;
+    }
+  }
+  return valorSelec;
+}
+
+
 formularioPersona.addEventListener("submit", obtenerDatos);
-// persona1.mostrarDatos();
-// persona1.esMayorEdad();
