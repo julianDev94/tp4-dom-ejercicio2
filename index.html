@@ -23,19 +23,28 @@
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    
+                    </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+              </div>
             </div>
           </nav>
     </header>
     <main class="d-flex flex-column justify-content-center">
       <section class="container w-50 my-3">
-        <form class="bg-dark-subtle p-3 border-3 shadow" id="formPerson">
+        <form class="bg-dark-subtle p-3 border-3 shadow" id="formularioAgregar">
           <label for="nombreControl" class="form-label text-primary fw-bold">Nombre:</label>
           <input
             class="form-control shadow border-black mb-2"
             type="text"
-            id="nombreControl"
+            id="nombreInput"
             placeholder="Nombre"
-            minlength="3"
+            minlength="10"
             maxlength="30"
             required
           />
@@ -44,9 +53,7 @@
             class="form-control shadow border-black mb-2"
             type="text"
             placeholder="Edad"
-            id="edadControl"
-            minlength="1"
-            maxlength="2"
+            id="edadInput"
             min="1"
             max="80"
             required
@@ -58,60 +65,58 @@
             class="form-control shadow border-black mb-2"
             type="text"
             placeholder="DNI"
-            id="dniControl"
+            id="dniInput"
             minlength="7"
             maxlength="8"
             required
           />
-          <label for="sexoControl" class="form-label text-primary fw-bold"
+          <label for="dniControl" class="form-label text-primary fw-bold"
             >Sexo: </label
           >
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadio" id="flexRadio1" checked>M
-            <!-- <label class="form-check-label" for="flexRadio1">
-              
-            </label> -->
+            <input class="form-check-input" type="radio" name="flexRadio" id="flexRadio1" checked>
+            <label class="form-check-label" for="flexRadio1">
+              Hombre
+            </label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadio" id="flexRadio2" >F
-            <!-- <label class="form-check-label" for="flexRadio2">
-              
-            </label> -->
+            <input class="form-check-input" type="radio" name="flexRadio" id="flexRadio2" >
+            <label class="form-check-label" for="flexRadio2">
+              Mujer
+            </label>
           </div>
-          <label for="pesoControl" class="form-label text-primary fw-bold"
+          <label for="dniControl" class="form-label text-primary fw-bold"
             >Peso: </label
           >
           <input
             class="form-control shadow border-black mb-2"
             type="text"
             placeholder="Peso"
-            id="pesoControl"
-            minlength="1"
-            maxlength="3"
+            id="pesoInput"
             min="20"
             max="180"
             required
           />
-          <label for="alturaControl" class="form-label text-primary fw-bold"
+          <label for="dniControl" class="form-label text-primary fw-bold"
             >Altura: </label
           >
           <input
             class="form-control shadow border-black mb-2"
             type="text"
             placeholder="Altura"
-            id="alturaControl"
+            id="alturaInput"
             minlength="2"
             maxlength="3"
             required
           />
-          <label for="anioControl" class="form-label text-primary fw-bold"
+          <label for="dniControl" class="form-label text-primary fw-bold"
             >Año nacimiento: </label
           >
           <input
             class="form-control shadow border-black mb-2"
-            type="text"
+            type="date"
             placeholder="Año Nacimiento"
-            id="anioControl"
+            id="anioInput"
             required
           />
 
